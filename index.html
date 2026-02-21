@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>60 ans d'Anne-Marie - Invitation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --burgundy: #800020;
+            --rose: #eecaca;
+            --text-dark: #1a1a1a;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        .font-script { font-family: 'Dancing Script', cursive; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        
+        .floral-bg {
+            background-image: url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&q=80&w=1000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .card-container {
+            background: #ffffff;
+            border: 1px solid rgba(128, 0, 32, 0.1);
+        }
+
+        .date-block {
+            display: inline-block;
+            margin: 1.5rem 0;
+            width: 100%;
+            max-width: 350px;
+        }
+        .date-line {
+            height: 2px;
+            background: var(--burgundy);
+            flex-grow: 1;
+        }
+        .date-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            gap: 20px;
+            padding: 15px 0;
+            border-top: 2px solid var(--burgundy);
+            border-bottom: 2px solid var(--burgundy);
+            margin: 5px 0;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .btn-primary {
+            background-color: var(--burgundy);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #a00028;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(128, 0, 32, 0.2);
+        }
+
+        .stepper-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1.5px solid var(--burgundy);
+            color: var(--burgundy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        .stepper-btn:hover { background: var(--rose); }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 md:p-10 floral-bg">
+
+    <div class="fixed inset-0 bg-white/40 z-0"></div>
+
+    <main class="relative z-10 max-w-xl w-full card-container shadow-2xl rounded-lg p-8 md:p-14 text-center fade-in">
+        
+        <header class="mb-6">
+            <h1 class="text-6xl md:text-8xl font-script text-[#800020] mb-2">Anne-Marie</h1>
+            <p class="text-2xl md:text-3xl font-serif italic text-gray-800">60 ans</p>
+        </header>
+
+        <div class="flex justify-center items-center gap-4 my-6">
+            <div class="h-[1px] w-12 bg-[#800020]/20"></div>
+            <div class="text-[#800020] text-xl">✦</div>
+            <div class="h-[1px] w-12 bg-[#800020]/20"></div>
+        </div>
+
+        <div class="date-block">
+            <div class="flex items-center gap-3">
+                <div class="date-line"></div>
+                <span class="uppercase tracking-[0.4em] text-sm font-bold text-[#800020]">Juillet</span>
+                <div class="date-line"></div>
+            </div>
+            
+            <div class="date-grid">
+                <div class="text-sm uppercase font-bold tracking-widest text-gray-900">Samedi</div>
+                <div class="text-7xl md:text-8xl font-serif font-black text-[#800020] leading-none">11</div>
+                <div class="text-sm uppercase font-bold tracking-widest text-gray-900">19h00</div>
+            </div>
+            
+            <div class="flex items-center gap-3">
+                <div class="date-line"></div>
+                <span class="uppercase tracking-[0.4em] text-sm font-bold text-[#800020]">2026</span>
+                <div class="date-line"></div>
+            </div>
+        </div>
+
+        <div class="mt-8 mb-10">
+            <p class="text-xl italic text-gray-700 mb-1">12 Rue des Fagottes</p>
+            <p class="text-3xl font-bold text-[#800020] tracking-widest mb-8">GIGEAN</p>
+            
+            <a href="https://www.google.com/maps/dir/?api=1&destination=12+Rue+des+Fagottes+34770+Gigean" 
+               target="_blank" 
+               class="inline-flex items-center gap-3 px-10 py-4 border-2 border-[#800020] text-[#800020] rounded-full font-bold uppercase text-xs tracking-widest hover:bg-[#800020] hover:text-white transition-all duration-300">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                Itinéraire Google Maps
+            </a>
+        </div>
+
+        <section id="rsvp-section" class="mt-12 bg-stone-50 p-8 rounded-xl border border-gray-100">
+            <h2 class="text-2xl font-serif mb-8 uppercase tracking-[0.2em] text-gray-800">Votre présence</h2>
+            
+            <form id="rsvpForm" class="space-y-8">
+                <div class="relative">
+                    <input type="text" id="guestName" placeholder=" " required 
+                        class="peer w-full p-4 border-b-2 border-gray-200 bg-transparent focus:border-[#800020] outline-none transition-all text-center text-lg">
+                    <label class="absolute left-0 right-0 top-4 text-gray-400 pointer-events-none transition-all peer-focus:-top-4 peer-focus:text-[11px] peer-focus:text-[#800020] peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-[11px] font-bold uppercase tracking-widest">
+                        Nom & Prénom (ou surnom 😉)
+                    </label>
+                </div>
+                
+                <div class="flex gap-4">
+                    <button type="button" onclick="setAttendance(true)" id="btnYes" 
+                        class="flex-1 py-5 border-2 border-[#800020] rounded-lg text-[#800020] font-bold hover:bg-[#800020] hover:text-white transition-all uppercase tracking-widest text-sm">
+                        Je viens ! 🥂
+                    </button>
+                    <button type="button" onclick="setAttendance(false)" id="btnNo"
+                        class="flex-1 py-5 border-2 border-gray-300 rounded-lg text-gray-400 font-bold hover:bg-gray-100 transition-all uppercase tracking-widest text-sm">
+                        Pas dispo 😢
+                    </button>
+                </div>
+
+                <div id="extraOptions" class="hidden space-y-8 pt-4 animate-fade-in">
+                    <div class="flex items-center justify-between bg-white p-5 rounded-lg border border-gray-100 shadow-sm">
+                        <span class="text-sm font-bold text-gray-600 uppercase tracking-widest">Nombre de convives</span>
+                        <div class="flex items-center gap-5">
+                            <button type="button" onclick="updateCount(-1)" class="stepper-btn">-</button>
+                            <span id="participantCountDisplay" class="text-2xl font-serif font-bold w-6 text-[#800020]">1</span>
+                            <button type="button" onclick="updateCount(1)" class="stepper-btn">+</button>
+                        </div>
+                    </div>
+                    <textarea id="message" placeholder="Un petit mot pour Anne-Marie ?" 
+                        class="w-full p-4 border border-gray-200 rounded-lg h-28 focus:border-[#800020] outline-none resize-none bg-white text-sm"></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn" class="w-full py-5 btn-primary text-white font-bold rounded-full shadow-xl uppercase tracking-[0.3em] hidden">
+                    Confirmer ma réponse
+                </button>
+            </form>
+            <div id="statusMessage" class="mt-4 font-semibold hidden"></div>
+        </section>
+
+        <footer class="mt-16 opacity-30 text-[10px] uppercase tracking-[0.5em] font-bold">
+            Anne-Marie • 11.07.2026 • Gigean
+        </footer>
+
+    </main>
+
+    <script>
+        let attendance = null;
+        let participantCount = 1;
+
+        // --- CONFIGURATION CONNECTÉE ---
+        const AIRTABLE_PAT = "patLuDbkadzwViRUd.a66a847aad3b0ca9876df74ac415ecf50574bfe679620bc573116f2da7f63a6a"; 
+        const AIRTABLE_BASE_ID = "appJu7OdqtuCcIfvC"; 
+        const TABLE_ID = "tblRbi4Y1066spxoz"; // Identifiant de ta table
+
+        function setAttendance(value) {
+            attendance = value;
+            const btnYes = document.getElementById('btnYes');
+            const btnNo = document.getElementById('btnNo');
+            const extra = document.getElementById('extraOptions');
+            const submitBtn = document.getElementById('submitBtn');
+
+            if (value) {
+                btnYes.classList.add('bg-[#800020]', 'text-white');
+                btnNo.classList.remove('bg-gray-500', 'text-white');
+                btnNo.classList.add('text-gray-400', 'bg-transparent');
+                extra.classList.remove('hidden');
+                submitBtn.classList.remove('hidden');
+                submitBtn.innerText = "Confirmer ma venue";
+            } else {
+                btnNo.classList.add('bg-gray-500', 'text-white');
+                btnYes.classList.remove('bg-[#800020]', 'text-white');
+                extra.classList.add('hidden');
+                submitBtn.classList.remove('hidden');
+                submitBtn.innerText = "Envoyer mes regrets";
+            }
+        }
+
+        function updateCount(delta) {
+            participantCount = Math.max(1, participantCount + delta);
+            document.getElementById('participantCountDisplay').innerText = participantCount;
+        }
+
+        document.getElementById('rsvpForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = document.getElementById('submitBtn');
+            const statusMsg = document.getElementById('statusMessage');
+            
+            submitBtn.disabled = true;
+            submitBtn.innerText = "Envoi...";
+
+            const data = {
+                fields: {
+                    "Nom": document.getElementById('guestName').value,
+                    "Presence": attendance ? "Oui" : "Non",
+                    "Nombre de participants": attendance ? participantCount : 0,
+                    "Message": document.getElementById('message').value,
+                    "Date d'inscription": new Date().toISOString()
+                }
+            };
+
+            try {
+                // Utilisation du proxy pour éviter les problèmes de CORS dans l'aperçu
+                const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${TABLE_ID}`;
+                
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${AIRTABLE_PAT}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    showSuccess("Merci ! Votre réponse a bien été transmise à Anne-Marie.");
+                } else {
+                    const errorData = await response.json();
+                    console.error("Erreur Airtable:", errorData);
+                    throw new Error();
+                }
+            } catch (error) {
+                statusMsg.innerText = "Une erreur est survenue lors de l'envoi. Vérifiez que votre table s'appelle bien 'Invites' avec les bonnes colonnes.";
+                statusMsg.classList.remove('hidden');
+                statusMsg.classList.add('text-red-600');
+                submitBtn.disabled = false;
+                submitBtn.innerText = "Réessayer";
+            }
+        });
+
+        function showSuccess(msg) {
+            document.getElementById('rsvpForm').classList.add('hidden');
+            const statusMsg = document.getElementById('statusMessage');
+            statusMsg.innerText = msg;
+            statusMsg.classList.remove('hidden');
+            statusMsg.classList.add('text-[#800020]', 'text-xl', 'font-serif', 'italic', 'py-12');
+        }
+    </script>
+</body>
+</html>
